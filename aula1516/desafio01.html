@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>desafio</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <img src="" alt="imagem em branco" id=itela width="280px" height="200px">
+    <br><br>
+
+    <input type="button" value="<<" name="b1" id="ibotao1" onclick="anterior()">
+    <input type="button" value=">>" name="b2" id="ibotao2" onclick="proximo()">
+    <script>
+        var i = 0;
+        var imagens = [];
+        var textos = [];
+        
+        imagens.push("01.jpg");
+        imagens.push("02.jpg");
+        imagens.push("03.jpg");
+        imagens.push("04.jpg");
+
+        textos.push("Lavar as mãos com água e sabão ou desinfetar com alcool 70.");
+        textos.push("Evitar tocar olhos e boca com as mãos sujas.");
+        textos.push("Desinfetar objetos e superfícies.");
+        textos.push("Procurar atendimento médico se apresentar sintomas.");
+
+        
+        function anterior() {
+            if (i <= 1) {
+                i = 4;
+
+            }
+            i--;
+            document.getElementById("itela").src = imagens[i], textos[i];
+        }
+        function proximo() {
+            if (i >= 3) {
+                i = -1;
+            }
+            i++;
+            document.getElementById("itela").src = imagens[i], textos[i];
+        }
+
+    </script>
+</body>
+
+</html>

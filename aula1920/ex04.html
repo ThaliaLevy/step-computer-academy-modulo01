@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //continuar esse
+
+        function verificarCpf(n) {
+            aux = n;
+            if (aux.charAt(3) == '.' && aux.charAt(7) == '.' && aux.charAt(11) == '-' && aux.lenght == 14) {
+                console.log('é um cpf válido');
+            } else {
+                console.log('não é um cpf válido');
+            }
+        }
+        
+        var cpf = prompt('Digite seu CPF:');
+        verificarCpf(cpf);
+
+    </script>
+</body>
+
+</html>

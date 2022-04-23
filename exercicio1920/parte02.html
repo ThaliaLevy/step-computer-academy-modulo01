@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte 02</title>
+</head>
+
+<body>
+    <script>
+
+        var nome = prompt('Digite seu nome completo:');
+
+        function analisarNome(n) {
+
+            for (var i = 0, len = n.length; i < len; i++) {
+                n.charAt(i);
+
+                if (n.charAt(i) == ('a') || n.charAt(i) == ('b') || n.charAt(i) == ('A') || n.charAt(i) == ('b') || n.charAt(i) == ('B') || n.charAt(i) == ('c') || n.charAt(i) == ('C') || n.charAt(i) == ('d') || n.charAt(i) == ('D') || n.charAt(i) == ('e') || n.charAt(i) == ('E') ||
+                    n.charAt(i) == ('f') || n.charAt(i) == ('F') || n.charAt(i) == ('g') || n.charAt(i) == ('G') || n.charAt(i) == ('h') || n.charAt(i) == ('H') || n.charAt(i) == ('i') || n.charAt(i) == ('I') || n.charAt(i) == ('j') || n.charAt(i) == ('J') || n.charAt(i) == ('k') || n.charAt(i) == ('K') ||
+                    n.charAt(i) == ('l') || n.charAt(i) == ('L') || n.charAt(i) == ('m') || n.charAt(i) == ('M') || n.charAt(i) == ('n') || n.charAt(i) == ('N') || n.charAt(i) == ('o') || n.charAt(i) == ('O') || n.charAt(i) == ('p') || n.charAt(i) == ('P') || n.charAt(i) == ('q') || n.charAt(i) == ('Q') ||
+                    n.charAt(i) == ('r') || n.charAt(i) == ('R') || n.charAt(i) == ('s') || n.charAt(i) == ('S') || n.charAt(i) == ('t') || n.charAt(i) == ('T') || n.charAt(i) == ('u') || n.charAt(i) == ('U') || n.charAt(i) == ('v') || n.charAt(i) == ('V') || n.charAt(i) == ('w') || n.charAt(i) == ('W') ||
+                    n.charAt(i) == ('x') || n.charAt(i) == ('X') || n.charAt(i) == ('y') || n.charAt(i) == ('Y') || n.charAt(i) == ('z') || n.charAt(i) == ('Z') || n.charAt(i) == (' ')) {
+                    document.write(n[i]);
+
+                } else {
+                    aux = n.replace(n[i], '');
+                }
+            }
+        }
+        analisarNome(nome);
+
+    </script>
+</body>
+
+</html>

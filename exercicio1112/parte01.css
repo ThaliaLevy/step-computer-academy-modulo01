@@ -1,0 +1,185 @@
+#div1{
+    background-color: rgb(230, 227, 227);
+    width:270px;
+    height:385px;
+    border-radius: 5%;
+}
+#iresultado{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 238px;
+    height: 60px;
+    font-size: 30px;
+    text-align: right;
+}
+#div2{
+    border: transparent;
+    position: absolute;
+    margin-top: 85px;
+    margin-left: 10px;
+}
+#iporcentagem{
+    width: 60px;
+    height: 45px;
+}
+#ice{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 2px;
+}
+#ic{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 64px;
+}
+#iac{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 126px;
+}
+#iquadrado{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 48px;
+    margin-left: 2px;
+}
+#iraiz{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 48px;
+    margin-left: 64px;
+}
+#idivisao{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 48px;
+    margin-left: 126px;
+    font-size: 20px;
+}
+#inegativo{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 48px;
+    margin-left: -60px;
+}
+#isete{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 96px;
+    margin-left: -60px;
+}
+#ioito{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 96px;
+    margin-left: 2px;
+}
+#inove{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 96px;
+    margin-left: 64px;
+}
+#imultiplicacao{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 96px;
+    margin-left: 126px;
+}
+#iquatro{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 144px;
+    margin-left: -60px;
+}
+#icinco{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 144px;
+    margin-left: 2px;
+}
+#iseis{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 144px;
+    margin-left: 64px;
+}
+#isubtracao{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 144px;
+    margin-left: 126px;
+    font-size: 20px;
+}
+#ium{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 192px;
+    margin-left: -60px;
+}
+#idois{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 192px;
+    margin-left: 2px;
+}
+#itres{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 192px;
+    margin-left: 64px;
+}
+#isoma{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 192px;
+    margin-left: 126px;
+    font-size: 20px;
+}
+#izero{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 2px;
+}
+#iponto{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 64px;
+    font-size: 20px;
+}
+#iigual{
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    margin-top: 240px;
+    margin-left: 126px;
+    font-size: 20px;
+}
+

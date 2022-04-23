@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 15 e 16, Exemplo 06</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Eventos e uso do documento.elementeById()</h1>
+    <p>Evento - onFocus - ao ganhar o foco</p>
+    <p>Evento - onBlur - ao perder o foco</p>
+    <br>
+    <input type="text" name="valor1" id="ivalor1" onfocus="corFundo1()" onblur="corFundo1()">
+    <br>
+    <p id="ierro1"></p>
+    <script>
+        function corFundo1() {
+            var aux = document.getElementById("ivalor1").value;
+            if (aux == null || aux == "") {
+                document.getElementById("ivalor1").style.backgroundColor = "yellow";
+                document.getElementById("ierro1").innerHTML = "Preencha por favor";
+                document.getElementById("ierro1").style.color = "red";
+            } else {
+                document.getElementById("ivalor1").style.backgroundColor = "blue";
+                document.getElementById("ierro1").innerHTML = "OK - Conferido";
+                document.getElementById("ierro1").style.color = "green";
+            }
+        }
+    </script>
+</body>
+
+</html>

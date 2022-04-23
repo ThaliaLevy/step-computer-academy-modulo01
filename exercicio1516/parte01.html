@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>cadastro</title>
+    <link rel='stylesheet' type='text/css' href='../estilo/novocadastro.css'>
+</head>
+
+<body>
+    <header>
+        <div id='origem_data'>
+            <p id='ajustar0'>
+
+                Origem:<br>
+                <input type="text" id='input1' onfocus="atencaoPreencherOrigem()" onchange="formatarEspacos()">
+            <p id='erroorigem'></p>
+
+                <div id='dest'>Destino:</div>
+                <input type="text" id='input2' onfocus="atencaoPreencherDestino()" onchange="formatarEspacos()">
+            <p id='errodestino'></p>
+
+            </p>
+
+            <p id='ajustar00'>
+                Data ida: <br>
+                <input type="date" id='input3'><br><br>
+                Data volta: <br>
+                <input type="date" id='input4'>
+            </p>
+
+        </div>
+        <button id='guardarInf' onclick="guardarInfOrigemData()">Buscar Voos</button>
+    </header>
+
+    <nav>
+        <div id='index'><a href='indexproj.html' target='_self' title='Voltar para a página principal'>Página Inicial</a>
+        </div>
+
+        <div id='cadastro'><a href='cadastroproj.html' target='_self' title='Cadastre-se e tire dúvidas'>Cadastre-se</a>
+        </div>
+        <div id='fotos'><a href='fotosproj.html' target='_self' title='Abrir galeria de fotos'>Galeria
+                de Fotos</a></div>
+    </nav>
+
+    <main>
+        <div id='faixa'>
+            <h1>CADASTRE-SE</h1>
+            <h2>Receba novidades sobre passagens e descontos, ou solicite
+                <br> avaliação de currículo para trabalhar conosco.</h2>
+        </div>
+
+        <div id='ajustar'><br>
+
+            <label>Nome:</label> <input type='text' id='nome' name='nome' onchange='formatarEspacos()'
+                onfocus='atencaoPreencherNome()'></input>
+            <p id='erronome'></p>
+
+            <label>Nome do pai:</label> <input type='text' id='pai' name='pai' onchange='formatarEspacos()'
+                onfocus='atencaoPreencherPai()'></input>
+            <p id='erropai'></p>
+
+            <label>Nome da mãe:</label> <input type='text' id='mae' name='mae' onfocus='atencaoPreencherMae()'
+                onchange="formatarEspacos()"></input>
+            <p id='erromae'></p>
+
+            <label>RG:</label> <input type='number' id='rg' name='rg' onfocus='atencaoPreencherRg()'
+                onchange='verificarPositivo()'></input>
+            <p id='errorg'></p>
+
+            <label>CPF:</label> <input type='number' id='cpf' name='cpf' onchange='verificarPositivo()'
+                onfocus='atencaoPreencherCpf()' onblur='formatoCpf()'></input>
+            <p id='errocpf'></p>
+
+            <label>Telefone fixo:</label> <input type='tel' id='telfixo' name='telfixo' onchange='verificarPositivo()'
+                onfocus='atencaoPreencherTelfixo()'></input>
+            <p id='errotelfixo'></p>
+
+            <label>Celular:</label> <input type='tel' id='cel' name='cel' onfocus='atencaoPreencherCel()'
+                onchange="verificarPositivo()"></input>
+            <p id='errocel'></p>
+
+            <label>E-mail:</label> <input type='email' id='email' name='email' onfocus='atencaoPreencherEmail()'
+                onchange="formatarEspacos()" onblur='formatoEmail()'></input>
+            <p id='erroemail'></p><br>
+
+            <label>Sexo:</label> <input type='radio' name='sexo' id='sexo'>Masculino</input>
+            <input type='radio' name='sexo' id='sexo'>Feminino</input>
+            <br><br>
+
+            <label>Cidade de nascimento:</label> <input type='text' id='cidadenasc' name='cidadenasc'
+                onchange='formatarEspacos()' onfocus='atencaoPreencherCidadenasc()'></input>
+            <p id='errocidadenasc'></p>
+
+            <label>CEP:</label> <input type='number' id='cep' name='cep' onfocus='atencaoPreencherCep()'
+                onchange='verificarPositivo()'></input>
+            <p id='errocep'></p>
+
+            <label>UF de nascimento:</label>
+            <select onfocus='atencaoPreencherUfnasc()' onchange='formatarEspacos()' id='ufnasc'>
+                <option value=''></option>
+                <option value='Acre - AC'>Acre - AC</option>
+                <option value='Alagoas - AL'>Alagoas - AL</option>
+                <option value='Amapá - AP'>Amapá - AP</option>
+                <option value='Amazonas - AM'>Amazonas - AM</option>
+                <option value='Bahia - BA'>Bahia - BA</option>
+                <option value='Ceará - CE'>Ceará - CE</option>
+                <option value='Distrito Federal - DF'>Distrito Federal - DF</option>
+                <option value='Espírito Santo - ES'>Espírito Santo - ES</option>
+                <option value='Goiás - GO'>Goiás - GO</option>
+                <option value='Maranhão - MA'>Maranhão - MA</option>
+                <option value='Mato Grosso - MT'>Mato Grosso - MT</option>
+                <option value='Mato Grosso do Sul - MS'>Mato Grosso do Sul - MS</option>
+                <option value='Minas Gerais - MG'>Minas Gerais - MG</option>
+                <option value='Pará - PA'>Pará - PA</option>
+                <option value='Paraíba - PB'>Paraíba - PB</option>
+                <option value='Paraná - PR'>Paraná - PR</option>
+                <option value='Pernambuco - PE'>Pernambuco - PE</option>
+                <option value='Piauí - PI'>Piauí - PI</option>
+                <option value='Rio de Janeiro - RJ'>Rio de Janeiro - RJ</option>
+                <option value='Rio Grande do Norte - RN'>Rio Grande do Norte - RN</option>
+                <option value='Rio Grande do Sul - RS'>Rio Grande do Sul - RS</option>
+                <option value='Rondônia - RO'>Rondônia - RO</option>
+                <option value='Roraima - RR'>Roraima - RR</option>
+                <option value='Santa Catarina - SC'>Santa Catarina - SC</option>
+                <option value='São Paulo - SP'>São Paulo - SP</option>
+                <option value='Sergipe - SE'>Sergipe - SE</option>
+                <option value='Tocantins - TO'>Tocantins - TO</option>
+            </select>
+            <p id='erroufnasc'></p>
+
+            <label>Rua:</label> <input type='text' id='rua' name='rua' onchange='formatarEspacos()'
+                onfocus='atencaoPreencherRua()'></input>
+            <p id='errorua'></p>
+
+            <label>Número:</label> <input type='number' id='num' name='num' onfocus='atencaoPreencherNum()'
+                onchange='verificarPositivo()'></input>
+            <p id='erronum'></p>
+
+            <label>Complemento:</label> <input type='text' id='complemento' name='complemento'
+                onchange='formatarEspacos()' onfocus='atencaoPreencherComplemento()'></input>
+            <p id='errocomplemento'></p>
+
+            <label>Bairro:</label> <input type='text' id='bairro' name='bairro' onchange='formatarEspacos()'
+                onfocus='atencaoPreencherBairro()'></input>
+            <p id='errobairro'></p>
+
+            <label>Cidade:</label> <input type='text' id='cidade' name='cidade' onchange='formatarEspacos()'
+                onfocus='atencaoPreencherCidade()'></input>
+            <p id='errocidade'></p>
+
+            <label>UF:</label>
+
+            <select onfocus='atencaoPreencherUf()' onchange='formatarEspacos()' id='uf'>
+                <option value=''></option>
+                <option value='Acre - AC'>Acre - AC</option>
+                <option value='Alagoas - AL'>Alagoas - AL</option>
+                <option value='Amapá - AP'>Amapá - AP</option>
+                <option value='Amazonas - AM'>Amazonas - AM</option>
+                <option value='Bahia - BA'>Bahia - BA</option>
+                <option value='Ceará - CE'>Ceará - CE</option>
+                <option value='Distrito Federal - DF'>Distrito Federal - DF</option>
+                <option value='Espírito Santo - ES'>Espírito Santo - ES</option>
+                <option value='Goiás - GO'>Goiás - GO</option>
+                <option value='Maranhão - MA'>Maranhão - MA</option>
+                <option value='Mato Grosso - MT'>Mato Grosso - MT</option>
+                <option value='Mato Grosso do Sul - MS'>Mato Grosso do Sul - MS</option>
+                <option value='Minas Gerais - MG'>Minas Gerais - MG</option>
+                <option value='Pará - PA'>Pará - PA</option>
+                <option value='Paraíba - PB'>Paraíba - PB</option>
+                <option value='Paraná - PR'>Paraná - PR</option>
+                <option value='Pernambuco - PE'>Pernambuco - PE</option>
+                <option value='Piauí - PI'>Piauí - PI</option>
+                <option value='Rio de Janeiro - RJ'>Rio de Janeiro - RJ</option>
+                <option value='Rio Grande do Norte - RN'>Rio Grande do Norte - RN</option>
+                <option value='Rio Grande do Sul - RS'>Rio Grande do Sul - RS</option>
+                <option value='Rondônia - RO'>Rondônia - RO</option>
+                <option value='Roraima - RR'>Roraima - RR</option>
+                <option value='Santa Catarina - SC'>Santa Catarina - SC</option>
+                <option value='São Paulo - SP'>São Paulo - SP</option>
+                <option value='Sergipe - SE'>Sergipe - SE</option>
+                <option value='Tocantins - TO'>Tocantins - TO</option>
+            </select>
+            <p id='errouf'></p>
+
+            <label>Data de nascimento:</label> <input type='date' id='datanasc'></input>
+            <br><br>
+
+        </div>
+
+        <label id='ajustar3'>Nível de escolaridade:</label>
+        <p id='ajustar4'>
+            <input type='radio' name='escolaridade'>1º grau completo</input><br>
+            <input type='radio' name='escolaridade'>2º grau completo</input><br>
+            <input type='radio' name='escolaridade'>3º grau completo</input><br>
+            <input type='radio' name='escolaridade'>1º grau incompleto</input><br>
+            <input type='radio' name='escolaridade'>2º grau incompleto</input><br>
+            <input type='radio' name='escolaridade'>3º grau incompleto</input>
+        </p>
+
+        <br><br>
+
+        <div id='itextarea'>
+
+            <label> Digite suas dúvidas, sugestões, reclamações ou, caso queira <br>
+                ter o perfil avaliado, informe o cargo e a pretensão salarial, <br>
+                bem como suas qualificações e experiências.
+            </label><br><br>
+            <textarea id='textar' onchange='formatarEspacos()' onclick="limparText()">Digite sua mensagem</textarea>
+            <br>
+
+        </div><br><br>
+        <button id='ajustar5' onclick="guardarInformacao()">Enviar</button>
+    </main>
+
+    <script>
+
+        function formatoEmail() {
+            n = document.getElementById('email').value;
+            i = 0;
+            for (n, i; i <= n.length; i++) {
+                if (n.indexOf('@') != -1) {
+                    document.getElementById("email").style.backgroundColor = 'while';
+                    document.getElementById('erroemail').innerHTML;
+                } else {
+                    document.getElementById("email").style.backgroundColor = 'red';
+                    document.getElementById('erroemail').innerHTML = 'Insira @ para um email válido.';
+                }
+            }
+        }
+
+        function formatoCpf() {
+            var n = document.getElementById('cpf').value;
+            if (n.length == 11) {
+                document.getElementById('cpf').value;
+            } else {
+                document.getElementById('cpf').value = null;
+                document.getElementById('errocpf').innerHTML = 'Digite os 11 números.';
+                document.getElementById("cpf").style.backgroundColor = 'red';
+            }
+        }
+
+        function formatarEspacos() {
+
+            if (document.getElementById('input1').value !== '') {
+                document.getElementById("input1").style.backgroundColor = 'white';
+                document.getElementById('erroorigem').innerHTML = null;
+            }
+
+            if (document.getElementById('input2').value !== '') {
+                document.getElementById("input2").style.backgroundColor = 'white';
+                document.getElementById('errodestino').innerHTML = null;
+            }
+
+            if (document.getElementById('nome').value !== '') {
+                n = document.getElementById('nome').value;
+                var aux = n.trim();
+                while (aux.includes('  ')) {
+                    aux = aux.replace('  ', ' ');
+                }
+                document.getElementById('nome').value = aux;
+                document.getElementById("nome").style.backgroundColor = 'white';
+                document.getElementById('erronome').innerHTML = null;
+            }
+
+            if (document.getElementById('pai').value !== '') {
+                n = document.getElementById('pai').value;
+                var aux = n.trim();
+                while (aux.includes('  ')) {
+                    aux = aux.replace('  ', ' ');
+                }
+                document.getElementById('pai').value = aux;
+                document.getElementById("pai").style.backgroundColor = 'white';
+                document.getElementById('erropai').innerHTML = null;
+            }
+
+            if (document.getElementById('mae').value !== '') {
+                n = document.getElementById('mae').value;
+                var aux = n.trim();
+                while (aux.includes('  ')) {
+                    aux = aux.replace('  ', ' ');
+                }
+                document.getElementById('mae').value = aux;
+                document.getElementById("mae").style.backgroundColor = 'white';
+                document.getElementById('erromae').innerHTML = null;
+            }
+
+            if (document.getElementById('email').value !== '') {
+                n = document.getElementById('email').value;
+                var aux = n.trim();
+                while (aux.includes('  ')) {
+                    aux = aux.replace('  ', ' ');
+                }
+                document.getElementById('email').value = aux;
+                document.getElementById("email").style.backgroundColor = 'white';
+                document.getElementById('erroemail').innerHTML = null;
+            }
+
+            if (document.getElementById('cidadenasc').value !== '') {
+                n = document.getElementById('cidadenasc').value;
+                var aux = n.trim();
+                while (aux.includes('  ')) {
+                    aux = aux.replace('  ', ' ');
+                }
+                document.getElementById('cidadenasc').value = aux;
+                document.getElementById("cidadenasc").style.backgroundColor = 'white';
+                document.getElementById('errocidadenasc').innerHTML = null;
+            }
+
+            if (document.getElementById('rua').value !== '') {
+                n = document.getElementById('rua').value;
+                var aux = n.trim();
+                while (aux.includes('  ')) {
+                    aux = aux.replace('  ', ' ');
+                }
+                document.getElementById('rua').value = aux;
+                document.getElementById("rua").style.backgroundColor = 'white';
+                document.getElementById('errorua').innerHTML = null;
+            }
+
+            if (document.getElementById('complemento').value !== '') {
+                n = document.getElementById('complemento').value;
+                var aux = n.trim();
+                while (aux.includes('  ')) {
+                    aux = aux.replace('  ', ' ');
+                }
+                document.getElementById('complemento').value = aux;
+                document.getElementById("complemento").style.backgroundColor = 'white';
+                document.getElementById('errocomplemento').innerHTML = null;
+            }
+
+            if (document.getElementById('bairro').value !== '') {
+                n = document.getElementById('bairro').value;
+                var aux = n.trim();
+                while (aux.includes('  ')) {
+                    aux = aux.replace('  ', ' ');
+                }
+                document.getElementById('bairro').value = aux;
+                document.getElementById("bairro").style.backgroundColor = 'white';
+                document.getElementById('errobairro').innerHTML = null;
+            }
+
+            if (document.getElementById('cidade').value !== '') {
+                n = document.getElementById('cidade').value;
+                var aux = n.trim();
+                while (aux.includes('  ')) {
+                    aux = aux.replace('  ', ' ');
+                }
+                document.getElementById('cidade').value = aux;
+                document.getElementById("cidade").style.backgroundColor = 'white';
+                document.getElementById('errocidade').innerHTML = null;
+            }
+
+            if (document.getElementById('textar').value !== '') {
+                n = document.getElementById('textar').value;
+                var aux = n.trim();
+                while (aux.includes('  ')) {
+                    aux = aux.replace('  ', ' ');
+                } document.getElementById('textar').value = aux;
+            }
+
+            if (document.getElementById('ufnasc').value !== '') {
+                n = document.getElementById('ufnasc').value;
+                document.getElementById('ufnasc').value = n;
+                document.getElementById("ufnasc").style.backgroundColor = 'white';
+                document.getElementById('erroufnasc').innerHTML = null;
+            }
+
+            if (document.getElementById('uf').value !== '') {
+                n = document.getElementById('uf').value;
+                document.getElementById('uf').value = n;
+                document.getElementById("uf").style.backgroundColor = 'white';
+                document.getElementById('errouf').innerHTML = null;
+            }
+
+            return;
+        }
+
+        function verificarPositivo() {
+
+            if (document.getElementById('cpf').value !== '') {
+                document.getElementById("cpf").style.backgroundColor = 'white';
+                document.getElementById('errocpf').innerHTML = null;
+            }
+            if (document.getElementById('cpf').value < 0) {
+                var n3 = document.getElementById('cpf').value;
+                document.getElementById('cpf').value = - n3;
+            } else {
+                document.getElementById('cpf').value;
+
+            }
+
+            if (document.getElementById('rg').value !== '') {
+                document.getElementById("rg").style.backgroundColor = 'white';
+                document.getElementById('errorg').innerHTML = null;
+            }
+            if (document.getElementById('rg').value < 0) {
+                var n3 = document.getElementById('rg').value;
+                document.getElementById('rg').value = - n3;
+            } else {
+                document.getElementById('rg').value;
+
+            }
+
+            if (document.getElementById('telfixo').value !== '') {
+                document.getElementById("telfixo").style.backgroundColor = 'white';
+                document.getElementById('errotelfixo').innerHTML = null;
+            }
+            if (document.getElementById('telfixo').value < 0) {
+                var n3 = document.getElementById('telfixo').value;
+                document.getElementById('telfixo').value = - n3;
+            } else {
+                document.getElementById('telfixo').value;
+
+            }
+
+            if (document.getElementById('cel').value !== '') {
+                document.getElementById("cel").style.backgroundColor = 'white';
+                document.getElementById('errocel').innerHTML = null;
+            }
+            if (document.getElementById('cel').value < 0) {
+                var n3 = document.getElementById('cel').value;
+                document.getElementById('cel').value = - n3;
+            } else {
+                document.getElementById('cel').value;
+
+            }
+
+            if (document.getElementById('cep').value !== '') {
+                document.getElementById("cep").style.backgroundColor = 'white';
+                document.getElementById('errocep').innerHTML = null;
+            }
+            if (document.getElementById('cep').value < 0) {
+                var n3 = document.getElementById('cep').value;
+                document.getElementById('cep').value = - n3;
+            } else {
+                document.getElementById('cep').value;
+
+            }
+
+            if (document.getElementById('num').value !== '') {
+                document.getElementById("num").style.backgroundColor = 'white';
+                document.getElementById('erronum').innerHTML = null;
+            }
+            if (document.getElementById('num').value < 0) {
+                var n3 = document.getElementById('num').value;
+                document.getElementById('num').value = - n3;
+            } else {
+                document.getElementById('num').value;
+
+            } return;
+        }
+
+        function limparText() {
+            if (document.getElementById('textar').value == 'Digite sua mensagem') {
+                document.getElementById('textar').value = '';
+            }
+
+        }
+
+        function atencaoPreencherOrigem() {
+            var n = document.getElementById('input1').value;
+            if (n == null || n == '') {
+                document.getElementById("input1").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('erroorigem').innerHTML = 'Preencha o campo.';
+                document.getElementById('erroorigem').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherDestino() {
+            var n = document.getElementById('input2').value;
+            if (n == null || n == '') {
+                document.getElementById("input2").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errodestino').innerHTML = 'Preencha o campo.';
+                document.getElementById('errodestino').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherDataIda() {
+            var n = document.getElementById('input3').value;
+            if (n == null || n == '') {
+                document.getElementById("input3").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('erroida').innerHTML = 'Preencha o campo.';
+                document.getElementById('erroida').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherDataVolta() {
+            var n = document.getElementById('input4').value;
+            if (n == null || n == '') {
+                document.getElementById("input4").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errovolta').innerHTML = 'Preencha o campo.';
+                document.getElementById('errovolta').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherNome() {
+            var n = document.getElementById('nome').value;
+            if (n == null || n == '') {
+                document.getElementById("nome").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('erronome').innerHTML = 'Preencha o campo.';
+                document.getElementById('erronome').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherMae() {
+            var n = document.getElementById('mae').value;
+            if (n == null || n == '') {
+                document.getElementById("mae").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('erromae').innerHTML = 'Preencha o campo.';
+                document.getElementById('erromae').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherPai() {
+            var p = document.getElementById('pai').value;
+            if (p == null || p == '') {
+                document.getElementById("pai").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('erropai').innerHTML = 'Preencha o campo.';
+                document.getElementById('erropai').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherRg() {
+            var n = document.getElementById('rg').value;
+            if (n == null || n == '') {
+                document.getElementById("rg").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errorg').innerHTML = 'Preencha o campo.';
+                document.getElementById('errorg').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherCpf() {
+            var n = document.getElementById('cpf').value;
+            if (n == null || n == '') {
+                document.getElementById("cpf").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errocpf').innerHTML = 'Preencha o campo.';
+                document.getElementById('errocpf').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherTelfixo() {
+            var n = document.getElementById('telfixo').value;
+            if (n == null || n == '') {
+                document.getElementById("telfixo").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errotelfixo').innerHTML = 'Preencha o campo.';
+                document.getElementById('errotelfixo').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherCel() {
+            var n = document.getElementById('cel').value;
+            if (n == null || n == '') {
+                document.getElementById("cel").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errocel').innerHTML = 'Preencha o campo.';
+                document.getElementById('errocel').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherEmail() {
+            var n = document.getElementById('email').value;
+            if (n == null || n == '') {
+                document.getElementById("email").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('erroemail').innerHTML = 'Preencha o campo.';
+                document.getElementById('erroemail').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherSexo() {
+            var n = document.getElementById('sexo').value;
+            if (n == null || n == '') {
+                document.getElementById("sexo").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errosexo').innerHTML = 'Preencha o campo.';
+                document.getElementById('errosexo').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherDatanasc() {
+            var n = document.getElementById('datanasc').value;
+            if (n == null || n == '') {
+                document.getElementById("datanasc").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errodatanasc').innerHTML = 'Preencha o campo.';
+                document.getElementById('errodatanasc').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherCidadenasc() {
+            var n = document.getElementById('cidadenasc').value;
+            if (n == null || n == '') {
+                document.getElementById("cidadenasc").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errocidadenasc').innerHTML = 'Preencha o campo.';
+                document.getElementById('errocidadenasc').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherCep() {
+            var n = document.getElementById('cep').value;
+            if (n == null || n == '') {
+                document.getElementById("cep").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errocep').innerHTML = 'Preencha o campo.';
+                document.getElementById('errocep').style.color = 'red';
+            }
+        }
+        function atencaoPreencherUfnasc() {
+            var n = document.getElementById('ufnasc').value;
+            if (n == null || n == '') {
+                document.getElementById("ufnasc").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('erroufnasc').innerHTML = 'Preencha o campo.';
+                document.getElementById('erroufnasc').style.color = 'red';
+            }
+        }
+        function atencaoPreencherRua() {
+            var n = document.getElementById('rua').value;
+            if (n == null || n == '') {
+                document.getElementById("rua").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errorua').innerHTML = 'Preencha o campo.';
+                document.getElementById('errorua').style.color = 'red';
+            }
+        }
+        function atencaoPreencherNum() {
+            var n = document.getElementById('num').value;
+            if (n == null || n == '') {
+                document.getElementById("num").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('erronum').innerHTML = 'Preencha o campo.';
+                document.getElementById('erronum').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherComplemento() {
+            var n = document.getElementById('complemento').value;
+            if (n == null || n == '') {
+                document.getElementById("complemento").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errocomplemento').innerHTML = 'Preencha o campo.';
+                document.getElementById('errocomplemento').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherBairro() {
+            var n = document.getElementById('bairro').value;
+            if (n == null || n == '') {
+                document.getElementById("bairro").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errobairro').innerHTML = 'Preencha o campo.';
+                document.getElementById('errobairro').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherCidade() {
+            var n = document.getElementById('cidade').value;
+            if (n == null || n == '') {
+                document.getElementById("cidade").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errocidade').innerHTML = 'Preencha o campo.';
+                document.getElementById('errocidade').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherUf() {
+            var n = document.getElementById('uf').value;
+            if (n == null || n == '') {
+                document.getElementById("uf").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('errouf').innerHTML = 'Preencha o campo.';
+                document.getElementById('errouf').style.color = 'red';
+            }
+        }
+
+        function atencaoPreencherNivelesc() {
+            var n = document.getElementById('nivelesc').value;
+            if (n == null || n == '') {
+                document.getElementById("nivelesc").style.backgroundColor = "rgb(247, 161, 128)";
+                document.getElementById('erronivelesc').innerHTML = 'Preencha o campo.';
+                document.getElementById('erronivelesc').style.color = 'red';
+            }
+        }
+
+        function guardarInfOrigemData(){
+            var guardarOrigem = document.getElementById('input1').value;
+            var guardarDestino = document.getElementById('input2').value;
+            var guardarDataIda = document.getElementById('input3').value;
+            var guardarDataVolta = document.getElementById('input4').value;
+
+            document.getElementById('input1').value = null;
+            document.getElementById('input2').value = null;
+            document.getElementById('input3').value = null;
+            document.getElementById('input4').value = null;
+
+
+            return alert('Informações para pesquisa de preços: origem: ' + guardarOrigem + ', destino: ' +
+            guardarDestino + ', data de ida: ' + guardarDataIda + ', data de volta: ' + guardarDataVolta);
+        }
+
+        function guardarInformacao() {
+            var guardarNome = document.getElementById('nome').value;
+            var guardarPai = document.getElementById('pai').value;
+            var guardarMae = document.getElementById('mae').value;
+            var guardarRg = document.getElementById('rg').value;
+            var guardarCpf = document.getElementById('cpf').value;
+            var guardarTelfixo = document.getElementById('telfixo').value;
+            var guardarCel = document.getElementById('cel').value;
+            var guardarEmail = document.getElementById('email').value;
+            var guardarSexo = document.getElementById('sexo').value;
+            var guardarCidadenasc = document.getElementById('cidadenasc').value;
+            var guardarCep = document.getElementById('cep').value;
+            var guardarUfnasc = document.getElementById('ufnasc').value;
+            var guardarRua = document.getElementById('rua').value;
+            var guardarNum = document.getElementById('num').value;
+            var guardarComplemento = document.getElementById('complemento').value;
+            var guardarBairro = document.getElementById('bairro').value;
+            var guardarCidade = document.getElementById('cidade').value;
+            var guardarUf = document.getElementById('uf').value;
+            var guardarDatanasc = document.getElementById('datanasc').value;
+            var guardarTextarea = document.getElementById('textar').value;
+
+            document.getElementById('nome').value = null;
+            document.getElementById('pai').value = null;
+            document.getElementById('mae').value = null;
+            document.getElementById('rg').value = null;
+            document.getElementById('cpf').value = null;
+            document.getElementById('telfixo').value = null;
+            document.getElementById('cel').value = null;
+            document.getElementById('email').value = null;
+            document.getElementById('cidadenasc').value = null;
+            document.getElementById('cep').value = null;
+            document.getElementById('ufnasc').value = null;
+            document.getElementById('rua').value = null;
+            document.getElementById('num').value = null;
+            document.getElementById('complemento').value = null;
+            document.getElementById('bairro').value = null;
+            document.getElementById('cidade').value = null;
+            document.getElementById('uf').value = null;
+            document.getElementById('datanasc').value = null;
+            document.getElementById('textar').value = null;
+        }
+
+    </script>
+
+</body>
+
+</html>

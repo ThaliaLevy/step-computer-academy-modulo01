@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte 03</title>
+</head>
+
+<body>
+
+    <script>
+
+        var n1 = parseInt(prompt('Insira o valor para saber se é primo:'));
+
+        function primo(valor) {
+            aux = 1;
+            aux2 = 0;
+
+            for (valor; aux <= valor; aux++) {
+                if (valor % aux == 0) {
+                    aux2++;
+                }
+            }
+            if (aux2 == 2) {
+                document.write(valor + ' é um número primo.');
+            } else {
+                document.write(valor + ' não é um número primo.');
+            }
+        }
+        primo(n1);
+
+    </script>
+</body>
+
+</html>

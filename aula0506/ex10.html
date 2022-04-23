@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //verificar depois como essas funções funcionam
+
+
+        //push() adiciona um valor no ultimo indice do vetor
+        //pop(), remove o ultimo elemento do vetor
+        //shift() remove o primeiro elemento da array
+        //unshift(), adiciona um elemente na primeira posição da array
+        //toString(), converte um valor de array ou a array em String
+        //o comando join(), junta os elementos da array, separando por algum caracter específico.
+        // declaração de vetor vazio
+        var v1 = ["laranja", "maçã", "abacate", "melão"];
+        document.write("<p> O tamanho do vetor v1 é: " + v1.length + "<\p>" );
+        document.write("<p> Todos os elementos da array é: " + v1 + "<\p> <br>" );
+        v1.shift();
+        document.write("<p> O tamanho do vetor v1 é: " + v1.length + "<\p>" );
+        document.write("<p> Todos os elementos da array é: " + v1 + "<\p> <br>" );
+        v1.unshift("jamelão");
+        document.write("<p> O tamanho do vetor v1 é: " + v1.length + "<\p>" );
+        document.write("<p> Todos os elementos da array é: " + v1 + "<\p> <br>" );
+        document.write("<p> Todos os elementos da array é: " + v1.join("@") + "<\p> <br>" );
+        document.write("<p> Todos os elementos da array é: " + v1.join(" @ ") + "<\p> <br>" );
+        document.write("<p> Todos os elementos da array é: [" + v1.join(" ], [ ") + "]<\p> <br>" );
+        // neste caso, nada mudará pq a array ja é de string
+        document.write("<p> Todos os elementos da array é: " + v1.toString() + "<\p> <br>" );
+         </script>
+        
+</body>
+</html>

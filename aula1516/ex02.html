@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>document 02</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+   
+    <input type="text" name="valor01" id="ivalor01" onfocus="fundoCor()">
+    <br>
+    <p id="ierro1"></p>
+
+    <script>
+        function fundoCor() {
+            var aux = document.getElementById("ivalor01").value;
+
+            if (aux == null || aux == "") {
+                document.getElementById("ivalor01").style.backgroundColor = "orange";
+                document.getElementById("ierro1").innerHTML = "Preencha, por favor";
+                document.getElementById("ierro1").style.color = "red";
+            } else {
+                document.getElementById("ivalor01").style.backgroundColor = "verde";
+                document.getElementById("ierro1").innerHTML;
+                document.getElementById("ierro1").style.color = "green";
+            }
+        }
+    </script>
+</body>
+
+</html>

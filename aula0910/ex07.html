@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style='font-family: consolas' ;>
+
+    <script>
+
+        for (var n1 = 1; n1 <= 20; n1++) {
+
+            if(n1 == 1 || n1 == 20){
+                document.write('*')
+            }
+
+            for (var n2 = 1; n2 <= 15; n2++) {
+
+                if (n2 == 1 || n2 == 15) {
+                    document.write('*');
+                } else {
+                    document.write('&nbsp')
+                }
+            } document.write('<br>');
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var n1, n2, n3, n4;
+        n1 = parseFloat(prompt("digite o primeiro valor"));
+        n2 = parseFloat(prompt("digite o segundo valor"));
+        n3 = parseFloat(prompt("digite o terceiro valor"));
+        n4 = parseFloat(prompt("digite o terceiro valor"));
+
+        if (n1 >= n2 && n1 >= n3 && n1 >= n4) {
+            document.write("<br> o maior numero é " + n1);
+        } else {
+
+            if (n2 >= n1 && n2 >= n3 && n2 >= n4) {
+                document.write("<br> o maior numero é " + n2);
+            } else {
+
+                if (n3 >= n1 && n3 >= n2 && n3 >= n4) {
+                    document.write("<br> o maior numero é " + n3);
+                } else {
+                    document.write("<br> o maior numero é " + n4);
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

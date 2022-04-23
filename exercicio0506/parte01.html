@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 01</title>
+</head>
+
+<body>
+
+    <p>
+    <h2>Menu:</h2> 
+    Digite uma das opções abaixo:<br>
+    1- Somar;<br>
+    2 - Subtrair;<br>
+    3 - Multiplicar;<br>
+    4 - Dividir;<br>
+    5 – Sair. 
+    </p>
+
+    <script>
+
+        var opçao = parseInt(prompt('Escolha uma opção, de 1 a 5, para efetuar a operação:'));
+
+        switch (opçao) {
+
+            case 1:
+                if (opçao = 1) {
+
+                    var v1 = parseInt(prompt('Digite o primeiro valor da operação'));
+                    var v2 = parseInt(prompt('Digite o segundo valor da operação'));
+                    document.write((v1 + v2));
+                } else {
+                    document.write('Comando inválido.');
+                }
+                break;
+
+            case 2:
+                var v1 = parseInt(prompt('Digite o primeiro valor da operação'));
+                var v2 = parseInt(prompt('Digite o segundo valor da operação'));
+                if (opçao = 2) {
+                    document.write(v1 - v2);
+                } else {
+                    document.write('Comando inválido.');
+                }
+                break;
+
+            case 3:
+                var v1 = parseInt(prompt('Digite o primeiro valor da operação'));
+                var v2 = parseInt(prompt('Digite o segundo valor da operação'));
+                if (opçao = 3) {
+                    document.write(v1 * v2);
+                } else {
+                    document.write('Comando inválido.');
+                }
+                break;
+
+            case 4:
+                var v1 = parseInt(prompt('Digite o primeiro valor da operação'));
+                var v2 = parseInt(prompt('Digite o segundo valor da operação'));
+                if (opçao = 4) {
+                    document.write(v1 / v2);
+                } else {
+                    document.write('Comando inválido.');
+                }
+                break;
+
+            case 5:
+                if (opçao = 5) {
+                    document.write('Não há resultados a serem exibidos.');
+
+                    break;
+                } default:
+                document.write("A opçao " + " ' " + opçao + " ' " + " não é válida.");
+        }
+
+    </script>
+</body>
+
+</html>

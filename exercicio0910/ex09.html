@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte 09</title>
+</head>
+
+<body>
+    <script>
+
+        var n1 = parseInt(prompt('Insira um número inteiro e positivo:'));
+        aux = 1;
+        aux2 = 0;
+
+
+        do{
+            if(n1%aux == 0){
+                aux2++;
+            }aux++
+        }while(n1 >= aux)
+
+        if(aux2 == 2){
+            
+            document.write(n1 + ' é um número primo.')
+        }else{
+            document.write(n1 + ' não é um número primo')
+        }
+
+    </script>
+</body>
+
+</html>

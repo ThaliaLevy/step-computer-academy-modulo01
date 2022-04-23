@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 13 e 14, Exemplo 02</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <h1>Usando Document.getElementById</h1>
+    <br>
+    <p>Sintaxe: </p>
+    <p> Document.getElementById = "nome_do id" </p>
+    <br>
+
+    <label>1º número:</label> <input type="text" id="n1">
+    <br>
+    <label>2º número:</label> <input type="text" id="n2">
+    <br>
+    <br>
+
+    <button onclick="somar()">Cique aqui, para calcular a soma.</button>
+    <br>
+    <br>
+    <label>Resultado:</label><input type="text" id="resultado">
+
+
+
+    <script>
+        function somar() {
+            // função sem passagem de argumentos
+            var valor1 = document.getElementById("n1").value = '';
+            var valor2 = document.getElementById("n2").value = null;
+            //var total = valor1 + valor2;
+            var total = parseInt(valor1) + parseInt(valor2);
+            document.getElementById("resultado").value = total;
+        }
+
+
+//acrescentar o null
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 09 e 10, Exemplo 06</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        var n1 = prompt('Insira o primeiro valor:'); 
+        var n2 = prompt('Insira o segundo valor:');
+
+        do {
+            document.write("<br>Menu");
+            document.write("<br>Digite uma opção abaixo:")
+            document.write("<br>1 - Para Somar");
+            document.write("<br>2 - Para Subtrair");
+            document.write("<br>3 - Para Multiplicar");
+            document.write("<br>4 - Para Dividir");
+            document.write("<br>s - Para Sair");
+            op = prompt("Digite a opção desejada", "");
+            document.write("<br>Você escolheu a opção " + op);
+            switch (op) {
+                case "1":
+                    document.write("<br>" + n1+n2);
+                    break;
+                case "2": 
+                    document.write("<br>" + n1-n2);
+                    break;
+                case "3":
+                    document.write("<br>" + n1*n2);
+                    break;
+                case "4": 
+                    document.write("<br>" + n1/n2);
+                    break;
+                case "s": 
+                    document.write("<br>");
+                    break;
+                default: 
+                    document.write("<br> Opção inválida.");
+            }
+        } while (op != "s");
+        document.write("<br>Fim do programa.");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte 01</title>
+</head>
+
+<body>
+    <script>
+        var nome = prompt('Digite seu nome:');
+        var sobrenome1 = prompt('Digite seu sobrenome (se não tiver, favor deixar vazio.):');
+        var sobrenome2 = prompt('Digite seu sobrenome (se não tiver, favor deixar vazio.):');
+        var ultimoNome = prompt('Digite seu último nome:');
+        var nomeCompleto = nome + ' ' + sobrenome1 + ' ' + sobrenome2 + ' ' + ultimoNome;
+
+        function formatarNome(n) {
+            var aux = n.trim();
+            while (aux.includes('  ')) {
+                aux = aux.replace('  ', ' ');
+
+            } return aux;
+        }
+
+        document.write(formatarNome(nomeCompleto));
+    </script>
+</body>
+
+</html>

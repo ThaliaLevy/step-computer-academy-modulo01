@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte 07</title>
+</head>
+
+<body>
+    <script>
+
+        var i = 1;
+        var aux = 0;
+        var n = parseInt(prompt("Digite o número para fazer a verificação:"));
+
+        while (i <= n) {
+            if (n % i == 0) {
+                aux++;
+            }
+            i++;
+        }
+        if (aux == 2) {
+            document.write("O número " + n + " é primo");
+        } else {
+            document.write("O número " + n + " não é primo");
+
+        }
+
+    </script>
+</body>
+
+</html>

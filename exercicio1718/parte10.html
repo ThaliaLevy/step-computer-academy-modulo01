@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte 10</title>
+</head>
+
+<body>
+    <script>
+
+        console.log('Nome com letras intercaladas entre caixa alta e caixa baixa:');
+
+        var myName = prompt('Digite seu nome:');
+        var nomeModificado = [];
+        for (var i = 0, len = myName.length; i < len; i++) {
+            nomeModificado.push(i % 2 === 0 ? myName[i].toLowerCase() : myName[i].toUpperCase());
+        }
+
+        console.log(nomeModificado.join(''));
+
+    </script>
+</body>
+
+</html>

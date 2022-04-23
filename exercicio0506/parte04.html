@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>parte 04</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <script>
+
+        var np = prompt('Digite o caracter para saber se é número ou pontuação:')
+        switch (np) {
+
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+            case '0':
+
+                document.write(np + " é número");
+                break;
+
+            case '.':
+            case ',':
+            case ';':
+            case ':':
+            case '=':
+            case '@':
+            case '&':
+            case '*':
+
+                document.write(np + " é uma pontuação");
+                break
+
+            default:
+                document.write("Informação inválida");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte 04</title>
+</head>
+
+<body>
+    <script>
+
+        var nome = prompt('Digite seu nome:');
+        var sobrenome1 = prompt('Digite seu sobrenome (se não tiver, favor deixar vazio.):');
+        var sobrenome2 = prompt('Digite seu sobrenome (se não tiver, favor deixar vazio.):');
+        var ultimoNome = prompt('Digite seu último nome:');
+        var nomeCompleto = nome + ' ' + sobrenome1 + ' ' + sobrenome2 + ' ' + ultimoNome;
+        document.write(nomeCompleto + '<br>');
+
+        function exibirUltimoNome(n) {
+            aux = nome + ' ' + sobrenome1 + ' ' + sobrenome2;
+            document.write(n.slice(aux.length));
+        }
+        exibirUltimoNome(nomeCompleto);
+
+    </script>
+</body>
+
+</html>

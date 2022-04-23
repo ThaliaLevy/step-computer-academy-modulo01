@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte 07</title>
+</head>
+
+<body>
+    <script>
+
+        var nome = ["Bruno", "Mario", "Roberta", "Lucas", "Carlos"];
+        for (var i = 0; i < nome.length; i++) {
+            if (i == (nome.length - 1)) {
+                document.write(" e " + nome[i] + " são meus amigos.");
+            } else {
+                if (i == 0) {
+                    document.write(nome[i]);
+                } else {
+                    document.write(", " + nome[i]);
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

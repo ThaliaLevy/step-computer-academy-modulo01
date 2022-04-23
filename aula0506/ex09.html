@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var v1 = [];
+        document.write("<p> O tamanho do vetor v1 é: " + v1.length + "<\p>");
+
+        v1[0] = "vermelho";
+        v1[1] = "azul";
+        v1[2] = "verde";
+        v1[13] = "cinza";
+        v1.push("bege"); //acrescenta um elemento
+
+
+        document.write("<p> O conteúdo do vetor v1 no índice 0 é: " + v1[0] + "<\p>");
+        document.write("<p> O conteúdo do vetor v1 no índice 1 é: " + v1[1] + "<\p>");
+        document.write("<p> O conteúdo do vetor v1 no índice 2 é: " + v1[2] + "<\p>");
+        document.write("<p> O conteúdo do vetor v1 no índice 13 é: " + v1[13] + "<\p>");
+        document.write(v1); //mostra todos os elementos do vetor
+
+        v1.pop(); //remove um elemento
+
+        document.write("<p> O tamanho do vetor v1 é: " + v1.length + "<\p>");
+    </script>
+
+</body>
+
+</html>

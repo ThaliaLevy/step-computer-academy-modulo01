@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte 03</title>
+</head>
+
+<body>
+    <script>
+
+        var nome = prompt('Digite o nome:');
+        var letra = prompt('Letra que se quer consultar:');
+
+        function nomeUsuario(aux1) {
+            resultado = aux1;
+            return resultado;
+        }
+
+
+        aux2 = nomeUsuario(nome).indexOf(letra);
+        if(aux2 == -1) {
+            console.log('A letra ' + letra + ' não está contida no nome');
+        } else {
+            console.log('O nome possui a letra ' + letra + ', que está na posição ' + nomeUsuario(nome).indexOf(letra));
+        }
+
+    </script>
+</body>
+
+</html>

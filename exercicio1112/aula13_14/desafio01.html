@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+ <title>Aula 13 e 14, Exemplo 02</title>
+ <meta charset="utf-8">
+ </head>
+ <body>
+
+ <h1>Usando Document.getElementById</h1>
+ <br>
+ <p>Sintaxe: </p>
+ <p> Document.getElementById = "nome_do id" </p>
+ <br>
+
+ <label>1º número:</label> <input type="text" id="n1">
+ <br>
+ <label>2º número:</label> <input type="text" id="n2">
+ <br>
+ <br>
+
+ <button onclick="somar()">clique aqui para exibir o resultado</button>
+ <br>
+ <br>
+ <label>Resultado:</label><input type="text" id="resultado1">
+
+ <button onclick="subtrair()">clique aqui para exibir o resultado</button>
+ <br>
+ <br>
+ <label>Resultado:</label><input type="text" id="resultado2">
+
+ <button onclick="multiplicar()">clique aqui para exibir o resultado</button>
+ <br>
+ <br>
+ <label>Resultado:</label><input type="text" id="resultado3">
+
+ <button onclick="dividir()">clique aqui para exibir o resultado</button>
+ <br>
+ <br>
+ <label>Resultado:</label><input type="text" id="resultado4">
+
+
+
+<script>
+function somar(){
+var valor1 = document.getElementById("n1").value;
+var valor2 = document.getElementById("n2").value;
+var total = parseInt(valor1)+ parseInt(valor2);
+document.getElementById("resultado1").value = total;
+}
+
+function subtrair(){
+var valor1 = document.getElementById("n1").value;
+var valor2 = document.getElementById("n2").value;
+document.getElementById("resultado2").value = valor1 - valor2;
+}
+
+function multiplicar(){
+var valor1 = document.getElementById("n1").value;
+var valor2 = document.getElementById("n2").value;
+document.getElementById("resultado3").value = valor1 * valor2;
+}
+
+function dividir(){
+var valor1 = document.getElementById("n1").value;
+var valor2 = document.getElementById("n2").value;
+document.getElementById("resultado4").value = valor1 / valor2;
+}
+
+
+</script>
+ </body>
+ </html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="parte01.css">
+        <title>parte 01</title>
+</head>
+
+<body>
+
+        <div id="div1">
+                <label for='iresultado'></label>
+                <input type="text" name='resultado' id='iresultado'>
+                <div id="div2">
+                        <label for='iporcentagem'></label><input type='button' name='porcentagem' id='iporcentagem'
+                                value='%' onclick="operador('%')">
+                        <label for='ice'></label><input type='button' name='ce' id='ice' value='CE'>
+                        <label for='ic'></label><input type='button' name='c' id='ic' value='C' onclick="limparVisor()">
+                        <label for='iac'></label><input type='button' name='ac' id='iac' value='AC'>
+                        <label for='iquadrado'></label><input type='button' name='quadrado' id='iquadrado' value='x²'
+                                onclick="operador('²')">
+                        <label for='iraiz'></label><input type='button' name='raiz' id='iraiz' value='√x'
+                                onclick="operador('√')">
+                        <label for='idivisao'></label><input type='button' name='divisao' id='idivisao' value='÷'
+                                onclick="operador('/')">
+                        <label for='inegativo'></label><input type='button' name='negativo' id='inegativo' value='+/-'
+                                onclick="preencherVisor('-')">
+                        <label for='isete'></label><input type='button' name='sete' id='isete' value='7'
+                                onclick="preencherVisor(7)">
+                        <label for='ioito'></label><input type='button' name='oito' id='ioito' value='8'
+                                onclick="preencherVisor(8)">
+                        <label for='inove'></label><input type='button' name='nove' id='inove' value='9'
+                                onclick="preencherVisor(9)">
+                        <label for='imultiplicacao'></label><input type='button' name='multiplicacao'
+                                id='imultiplicacao' value='X' onclick="operador('*')">
+                        <label for='iquatro'></label><input type='button' name='quatro' id='iquatro' value='4'
+                                onclick="preencherVisor(4)">
+                        <label for='icinco'></label><input type='button' name='cinco' id='icinco' value='5'
+                                onclick="preencherVisor(5)">
+                        <label for='iseis'></label><input type='button' name='seis' id='iseis' value='6'
+                                onclick="preencherVisor(6)">
+                        <label for='isubtracao'></label><input type='button' name='subtracao' id='isubtracao' value='-'
+                                onclick="operador('-')">
+                        <label for='ium'></label><input type='button' name='um' id='ium' value='1'
+                                onclick="preencherVisor(1)">
+                        <label for='idois'></label><input type='button' name='dois' id='idois' value='2'
+                                onclick="preencherVisor(2)">
+                        <label for='itres'></label><input type='button' name='tres' id='itres' value='3'
+                                onclick="preencherVisor(3)">
+                        <label for='isoma'></label><input type='button' name='soma' id='isoma' value='+'
+                                onclick="operador('+')">
+                        <label for='izero'></label><input type='button' name='zero' id='izero' value='0'
+                                onclick="preencherVisor(0)">
+                        <label for='iponto'></label><input type='button' name='ponto' id='iponto' value='.'
+                                onclick="preencherVisor('.')">
+                        <label for='iigual'></label><input type='button' name='igual' id='iigual' value='='
+                                onclick='calcularValores()'>
+                </div>
+        </div>
+
+        <script>
+
+                function limparVisor() {
+                        document.getElementById('iresultado').value = null;
+                }
+
+                function preencherVisor(valoresCalculados) {
+                        var aux = document.getElementById('iresultado').value;
+                        if (valoresCalculados == '-') {
+                                var aux = document.getElementById('iresultado').value = '-';
+                        } else {
+
+                                if (aux == '0') {
+                                        aux = '0.' + valoresCalculados;
+                                        document.getElementById('iresultado').value = aux;
+                                } else {
+                                        aux += valoresCalculados;
+                                        document.getElementById('iresultado').value = aux;
+                                }
+                        }
+                }
+                function operador(n) {
+
+                        operadores = n;
+
+                        primeiroValor = document.getElementById('iresultado').value;
+
+                        document.getElementById('iresultado').value = null;
+                }
+
+
+                function calcularValores() {
+
+                        segundoValor = document.getElementById('iresultado').value;
+                        document.getElementById('iresultado').value;
+
+                        switch (operadores) {
+                                case "-": document.getElementById('iresultado').value = parseFloat(primeiroValor) - parseFloat(segundoValor);
+                                        break;
+                                case "+": document.getElementById('iresultado').value = parseFloat(primeiroValor) + parseFloat(segundoValor);
+                                        break;
+                                case "*": document.getElementById('iresultado').value = parseFloat(primeiroValor) * parseFloat(segundoValor);
+                                        break;
+                                case "/": document.getElementById('iresultado').value = parseFloat(primeiroValor) / parseFloat(segundoValor);
+                                        break;
+                                case "√": document.getElementById('iresultado').value = Math.sqrt(parseFloat(primeiroValor));
+                                        break;
+                                case "%": document.getElementById('iresultado').value = parseFloat(primeiroValor) / 100;
+                                        break;
+                                case "²": document.getElementById('iresultado').value = parseFloat(primeiroValor) * parseFloat(primeiroValor);
+                                        break;
+
+                                default: document.getElementById('iresultado').value = 'erro';
+                        }
+
+                }
+
+        </script>
+</body>
+
+</html>

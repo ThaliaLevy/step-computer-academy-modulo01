@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function nomeCompleto() {
+
+            var n1 = document.getElementById('inome').value;
+            var n2 = document.getElementById('isobrenome').value;
+            var nomeCom = (n1 + ' ' + n2);
+
+            document.getElementById('inomeCompleto').value = nomeCom;
+            document.getElementById('isobrenome').value = '';
+            document.getElementById('inome').value = '';
+
+        }
+
+    </script>
+
+    <label for='inome'>Nome: <input type="text" name='nome' id='inome'></label>
+    <label for='isobrenome'>Sobrenome: <input type="text" name='sobrenome' id='isobrenome'></label>
+
+    <input type="button" value='Ver resultado' id='ibutton' onclick='nomeCompleto()'></button><br><br>
+
+    <label for='inomeCompleto'>Nome Completo: <input type="text" name='nomeCompleto' id='inomeCompleto'></label>
+
+
+
+</body>
+
+</html>

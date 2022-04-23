@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 15 e 16, Exemplo 10</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Caixa de Seleção</h1>
+    <label>Cidade:</label>
+    <select id="cboCidades">
+        <option></option>
+        <option value="-">--</option>
+        <option value="rio de janeiro">Rio de janeiro</option>
+        <option value="são paulo">São Paulo</option>
+        <option value="belo horizonte">Belo Horizonte</option>
+        <!-- valor conteudo ou texto da opção -->
+    </select>
+    <script>
+        document.write("<br>");
+        // pegando a referencia do select
+        var comboboxCidades = document.getElementById("cboCidades");
+        // .length - pega o tamanho da combobox
+        let tamanho = comboboxCidades.length;
+        document.write("<br> O tamanho é: " + comboboxCidades.length);
+        // podemos acessar cada opção do select usando o option[indice])
+        // as opções se comportam que nem um vetor/ array
+        //comboboxCidades.options[i]; // pega o elemento option
+        //comboboxCidades.options[i].value; // pega o valor do elemento no indice i, o valor é a informação do atributo value
+//comboboxCidades.options[i].text; // pega o text do elemento no indice i, o texto é a informação entra as tag option
+        document.write("<br> O Elemento é: " + comboboxCidades.options[1]);
+        document.write("<br> O valor é: " + comboboxCidades.options[1].value);
+        document.write("<br> O conteúdo ou texto é: " + comboboxCidades.options[1].text);
+        document.write("<br>");
+        // podemos percorrer uma combobox, semelhando ao um vetor
+        for (let i = 0; i < comboboxCidades.length; i++) {
+            // document.write("<br>" + comboboxCidades.options[i]); pega a opção do
+            select
+            document.write("<br>" + comboboxCidades.options[i].value); // pega o valo decada opção
+            document.write("<br>" + comboboxCidades.options[i].text); // pega o valo de cada opção
+            document.write("<br>");
+        }
+        //pega o índice da opção selecionada no momento, retorna 0 se não foi selecionado
+        document.write("<br>" + comboboxCidades.selectedIndex);
+        // pegando o valor do item selecionado
+        var cidade = comboboxCidades.options[comboboxCidades.selectedIndex].value;
+        document.write("<br> Cidade selecionado: " + cidade);
+        // alterando o indice do select
+        comboboxCidades.selectedIndex = 3;
+        var cidade2 = comboboxCidades.options[comboboxCidades.selectedIndex].value;
+        document.write("<br> Cidade selecionado: " + cidade2);
+        // caso deseja remover alguma opção durante a execução da página
+        // use o comando remove(indice)
+        document.write("<br> <br> Exibindo nova relação");
+        comboboxCidades.remove(2);
+        // podemos percorrer uma combobox
+        for (let i = 0; i < comboboxCidades.length; i++) {
+            // document.write("<br>" + comboboxCidades.options[i]); pega a opção do
+            select
+            document.write("<br>" + comboboxCidades.options[i].value); // pega o valo de cada opção
+            document.write("<br>" + comboboxCidades.options[i].text); // pega o valo de cada opção
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>

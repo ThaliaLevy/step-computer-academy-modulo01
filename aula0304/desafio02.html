@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ap {
+            color: green;
+        }
+
+        #rep {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        var n1;
+        var n2;
+        var n3;
+        var n4;
+
+        n1 = parseFloat(prompt("nota 1"));
+        n2 = parseFloat(prompt("nota 2"));
+        n3 = parseFloat(prompt("nota 3"));
+        n4 = parseFloat(prompt("nota 4"));
+
+        var media = ((n1 + n2 + n3 + n4) / 4);
+        alert(media)
+
+        if (media >= 5) {
+            document.write("<p id='ap'>Parabéns, você foi aprovado!</p>");
+        } else {
+            document.write("<p id='rep'>Você não foi aprovado. </p>")
+        }
+
+    </script>
+</body>
+
+</html>

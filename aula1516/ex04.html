@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Aula 15 e 16, Exemplo 08</title>
+<meta charset="utf-8">
+</head>
+<body>
+    
+<img src="" alt="imagem em branco" id=itela width="280px" height="200px">
+<br>
+<input type="button" value="imagem 1" name="b1" id="ibotao1" onclick="img1()">
+<input type="button" value="imagem 2" name="b2" id="ibotao2" onclick="img2()">
+<input type="button" value="imagem 3" name="b3" id="ibotao3" onclick="img3()">
+<input type="button" value="imagem 4" name="b4" id="ibotao4" onclick="img4()">
+<script>
+
+function img1() {
+document.getElementById("itela").src="img1.jpg";
+document.getElementById("itela").alt="Imagem 1";
+document.getElementById("ibotao2").style.color = "green";
+document.getElementById("ibotao3").style.color = "green";
+document.getElementById("ibotao4").style.color = "green";
+document.getElementById("ibotao2").style.backgroundColor = "black";
+document.getElementById("ibotao3").style.backgroundColor = "black";
+document.getElementById("ibotao4").style.backgroundColor = "black";
+document.getElementById("ibotao1").style.color = "black";
+document.getElementById("ibotao1").style.backgroundColor = "yellow";
+}
+
+function img2() {
+document.getElementById("itela").src="img2.jpg";
+document.getElementById("itela").alt="Imagem 2";
+document.getElementById("ibotao1").style.color = "green";
+document.getElementById("ibotao3").style.color = "green";
+document.getElementById("ibotao4").style.color = "green";
+document.getElementById("ibotao1").style.backgroundColor = "black";
+document.getElementById("ibotao3").style.backgroundColor = "black";
+document.getElementById("ibotao4").style.backgroundColor = "black";
+document.getElementById("ibotao2").style.color = "black";
+document.getElementById("ibotao2").style.backgroundColor = "yellow";
+}
+function img3() {
+document.getElementById("itela").src="img3.jpg";
+document.getElementById("itela").alt="Imagem 3";
+document.getElementById("ibotao1").style.color = "green";
+document.getElementById("ibotao2").style.color = "green";
+document.getElementById("ibotao4").style.color = "green";
+document.getElementById("ibotao1").style.backgroundColor = "black";
+document.getElementById("ibotao2").style.backgroundColor = "black";
+document.getElementById("ibotao4").style.backgroundColor = "black";
+document.getElementById("ibotao3").style.color = "black";
+document.getElementById("ibotao3").style.backgroundColor = "yellow";
+}
+
+function img4() {
+document.getElementById("itela").src="img4.jpg";
+document.getElementById("itela").alt="Imagem 4";
+document.getElementById("ibotao1").style.color = "green";
+document.getElementById("ibotao2").style.color = "green";
+document.getElementById("ibotao4").style.color = "green";
+document.getElementById("ibotao1").style.backgroundColor = "black";
+document.getElementById("ibotao2").style.backgroundColor = "black";
+document.getElementById("ibotao4").style.backgroundColor = "yellow";
+document.getElementById("ibotao3").style.color = "black";
+document.getElementById("ibotao3").style.backgroundColor = "black";
+}
+
+
+/*
+document.getElementById(" ").style.transition ="5s"
+document.getElementById(" ").style.color = ""
+document.getElementById(" ").style.visibility ="" => "visible|hidden|collapse|initial|inherit"
+document.getElementById(" ").style.transitionDuration = "1s";
+document.getElementById(" ").style.width = "300px"; 
+document.getElementById(" ").style.marginTop = "50px";
+document.getElementById("").style.fontFamily = "Impact,Charcoal,sans-serif";
+document.getElementById(" ").style.animationDelay = "1s";
+document.getElementById(" ").style.border = "thick solid #0000FF";
+document.getElementById("").style.borderRadius = "25px";
+*/
+</script>
+</body>
+</html>

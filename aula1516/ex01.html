@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>document 01</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <input type="text" name="valor01" id="ivalor01" onchange="verificarNumPos()">
+    <p id="ierro1"></p>
+
+    <script>
+        function verificarNumPos() {
+            var aux = parseInt(document.getElementById("ivalor01").value);
+
+            if (aux < 0) {
+                document.getElementById("ierro1").innerHTML = "Valor inválido"
+                document.getElementById("ierro1").style.color = "red";
+            } else {
+                document.getElementById("ierro1").innerHTML = "OK - Conferido"
+                document.getElementById("ierro1").style.color = "green";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Aula 15 e 16, Exemplo 09</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <img src="" alt="imagem em branco" id=itela width="280px" height="200px">
+    <br><br>
+
+    <input type="button" value="<<" name="b1" id="ibotao1" onclick="anterior()">
+    <input type="button" value=">>" name="b2" id="ibotao2" onclick="proximo()">
+    <script>
+        var i = 0; 
+        var imagens = []; 
+
+        imagens.push("img1.jpg");
+        imagens.push("img2.jpg");
+        imagens.push("img3.jpg");
+        imagens.push("img4.jpg");
+        function anterior() {
+            if(i <= 1){
+            i = 4;
+            
+            }
+            i--;
+            document.getElementById("itela").src = imagens[i];
+        }
+        function proximo() {
+            if(i >= 3){
+                i= -1;
+            }
+            i++;
+            document.getElementById("itela").src = imagens[i];
+        }
+
+// if (i<imagens.length-1){
+// i++;
+//}
+//if(i>0){
+// i--;
+//}
+        /*
+        
+        no JS
+        document.getElementById(" ").style.transition ="5s"
+        document.getElementById(" ").style.color = ""
+        document.getElementById(" ").style.visibility ="" =>
+        "visible|hidden|collapse|initial|inherit"
+        document.getElementById(" ").style.transitionDuration = "1s";
+        document.getElementById(" ").style.width = "300px";
+        document.getElementById(" ").style.marginTop = "50px";
+        document.getElementById("").style.fontFamily = "Impact,Charcoal,sans-serif";
+        document.getElementById(" ").style.animationDelay = "1s";
+        document.getElementById(" ").style.border = "thick solid #0000FF";
+        document.getElementById("").style.borderRadius = "25px";
+        */
+    </script>
+</body>
+
+</html>
